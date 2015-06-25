@@ -1,0 +1,10 @@
+language: ruby
+sudo: false
+addons:
+  apt:
+    packages:
+    - libcairo2-dev
+    - make
+install:
+  - "source ./testsuite/install_dependencies.sh"
+script: "cd testsuite; ./testsuite.rb -bin ../_gt/bin -path $PATH:../_gt/bin"
