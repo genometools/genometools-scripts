@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ev
+set -e
 wget -q https://github.com/genometools/genometools/archive/master.zip
 unzip -qq master.zip
 rm -f master.zip
