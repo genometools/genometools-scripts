@@ -1,2 +1,2 @@
-# gt-userscripts
+# genometools-scripts
 GenomeTools Lua userscripts
