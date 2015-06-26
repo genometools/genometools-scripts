@@ -1,0 +1,53 @@
+#!/usr/bin/env gt
+
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+
+op = OptionParser:new({usage="%prog <options> < infile.gff",
+                       oneliner="Do something with an input GFF.",
+                       version="0.1"})
+op:option{"-x", action='store_true', dest='my_bool',
+                help="a boolean option"}
+op:option{"-s", action='store', dest='something',
+                help="some string input"}
+options,args = op:parse({my_bool = false, something = "foo"})
+
+function usage()
+  op:help()
+  os.exit(1)
+end
+
+if #args < 1 then
+  usage()
+end
+
+visitor = gt.custom_visitor_new()
+function visitor:visit_feature(fn)
+  for node in fn:children() do
+    if node:get_type() == "exon" then
+       -- do stuff
+    elseif node:get_type() == "intron" then
+       -- do stuff
+    end
+  end
+  return 0
+end
+
+-- make simple visitor stream, just applies given visitor to every node
+visitor_stream = gt.custom_stream_new_unsorted()
+function visitor_stream:next_tree()
+  local node = self.instream:next_tree()
+  if node then
+    node:accept(self.vis)
+  end
+  return node
+end
+
+visitor_stream.instream = gt.gff3_in_stream_new_sorted()
+visitor_stream.vis = visitor
+out_stream = gt.gff3_out_stream_new_retainids(visitor_stream)
+local gn = out_stream:next_tree()
+while (gn) do
+  gn = out_stream:next_tree()
+end
+
