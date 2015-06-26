@@ -72,6 +72,7 @@ end
 
 $rootdir=File.join(Dir.pwd , "..", "..")
 $bindir=File.join(Dir.pwd , "..", "..", "bin")
+$testdata=File.join(Dir.pwd , "..", "testdata")
 
 Dir.glob("*_tests.rb").each do |file|
   require file
