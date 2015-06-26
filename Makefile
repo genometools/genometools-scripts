@@ -17,4 +17,13 @@ install:
 	install -d $(DESTDIR)$(docdir)
 	install $(doc_DATA) $(DESTDIR)$(docdir)
 
-.PHONY: all clean install
+.PHONY: all clean install readme
+
+readme:
+	cp README.md.in README.md
+	for f in ${bin_SCRIPTS} ; do \
+ 	 echo "### $$f" >> README.md; \
+	  echo '```' >> README.md; \
+	  ./$$f -h >> README.md; \
+	  echo '```' >> README.md; \
+	done

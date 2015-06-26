@@ -1,13 +1,35 @@
 #!/usr/bin/env gt
 
-function usage()
-  io.stderr:write("Adds a given parent attribute to all child features.\n")
-  io.stderr:write(string.format("Usage: %s <attribute> < <GFF>\n" , arg[0]))
-  os.exit(1)
-end
+--[[
+  Copyright (c) 2015 Sascha Steinbiss <sascha@steinbiss.name>
 
-if #arg < 1 then
-  usage()
+  Permission to use, copy, modify, and distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+]]
+
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+
+op = OptionParser:new({usage="%prog <options> < infile.gff",
+                       oneliner="Adds a given parent attribute to "
+                                .. "all child features.",
+                       version="0.1"})
+op:option{"-a", action='store', dest='attribute',
+                help="attribute to pass on to children (default: Name)"}
+options,args = op:parse({attribute = "Name"})
+
+function usage()
+  op:help()
+  os.exit(1)
 end
 
 function apply_to_child(root, attr, value)
@@ -25,7 +47,7 @@ end
 
 add_child_visitor = gt.custom_visitor_new()
 function add_child_visitor:visit_feature(fn)
-  apply_to_child(fn, arg[1], fn:get_attribute(arg[1]))
+  apply_to_child(fn, options.attribute, fn:get_attribute(options.attribute))
 end
 
 vis_stream = gt.custom_stream_new_unsorted()

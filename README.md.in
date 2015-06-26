@@ -1,0 +1,13 @@
+# genometools-scripts
+
+This repository contains scripts written in the Lua language using the
+GenomeTools [Lua bindings](http://genometools.org/docs.html). This API makes
+it quite easy to process GFF3 annotations and connect them to the corresponding
+sequences.
+
+Please look at `gt-TEMPLATE` for an example of how to write these scripts.
+
+![Build status](https://api.travis-ci.org/genometools/genometools-scripts.svg)
+
+## List of currently available scripts (use `make readme` to update)
+

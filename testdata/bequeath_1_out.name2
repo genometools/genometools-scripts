@@ -1,0 +1,50 @@
+##gff-version   3
+##sequence-region   chr1 147971134 148468994
+##sequence-region   chr10 55232537 55643814
+##sequence-region   chr11 1710216 131036335
+##sequence-region   chr12 38629559 39125713
+##sequence-region   chr13 29419740 112832621
+##sequence-region   chr14 98705377 98950024
+##sequence-region   chr15 41520749 42003799
+##sequence-region   chr16 4043 26056510
+##sequence-region   chr18 23784928 59823258
+##sequence-region   chr19 59061289 60023279
+##sequence-region   chr2 118288456 234767778
+##sequence-region   chr20 33305669 33793648
+##sequence-region   chr21 32669578 39739894
+##sequence-region   chr22 30131552 31778912
+##sequence-region   chr5 55887725 142374155
+##sequence-region   chr6 41411371 132691426
+##sequence-region   chr7 26905852 126835803
+##sequence-region   chr8 118886142 119279152
+##sequence-region   chr9 128768701 129020095
+##sequence-region   chrX 122525028 153939916
+chr1	ENCODE	gene	147971134	147975692	.	-	.	ID=gene1;name2=VPS72;Name=RP11-68I18.8-005
+chr1	ENCODE	exon	147971134	147971499	.	-	.	Parent=gene1;name2=VPS72
+chr1	ENCODE	exon	147975554	147975692	.	-	.	Parent=gene1;name2=VPS72
+###
+chr1	ENCODE	gene	147971134	147975694	.	-	.	ID=gene2;Name=RP11-68I18.8-007;name2=VPS72
+chr1	ENCODE	exon	147971134	147971169	.	-	.	Parent=gene2;name2=VPS72
+chr1	ENCODE	exon	147971347	147971499	.	-	.	Parent=gene2;name2=VPS72
+chr1	ENCODE	exon	147975673	147975694	.	-	.	Parent=gene2;name2=VPS72
+###
+chr1	ENCODE	gene	147971134	147975707	.	-	.	ID=gene3;Name=RP11-68I18.8-002;name2=VPS72
+chr1	ENCODE	exon	147971134	147971169	.	-	.	Parent=gene3;name2=VPS72
+chr1	ENCODE	exon	147971347	147971499	.	-	.	Parent=gene3;name2=VPS72
+chr1	ENCODE	exon	147975554	147975707	.	-	.	Parent=gene3;name2=VPS72
+###
+chr1	ENCODE	gene	147971134	147975720	.	-	.	ID=gene4;Name=RP11-68I18.8-006;name2=VPS72
+chr1	ENCODE	exon	147971134	147971169	.	-	.	Parent=gene4;name2=VPS72
+chr1	ENCODE	exon	147971347	147971499	.	-	.	Parent=gene4;name2=VPS72
+chr1	ENCODE	exon	147975554	147975720	.	-	.	Parent=gene4;name2=VPS72
+###
+chr1	ENCODE	gene	147971134	147975737	.	-	.	ID=gene5;Name=RP11-68I18.8-003;name2=VPS72
+chr1	ENCODE	exon	147971134	147971169	.	-	.	Parent=gene5;name2=VPS72
+chr1	ENCODE	exon	147971347	147971499	.	-	.	Parent=gene5;name2=VPS72
+chr1	ENCODE	exon	147975554	147975737	.	-	.	Parent=gene5;name2=VPS72
+###
+chr1	ENCODE	gene	147971134	147975762	.	-	.	ID=gene6;name2=VPS72;Name=RP11-68I18.8-001
+chr1	ENCODE	exon	147971134	147971169	.	-	.	Parent=gene6;name2=VPS72
+chr1	ENCODE	exon	147971347	147971499	.	-	.	Parent=gene6;name2=VPS72
+chr1	ENCODE	exon	147975554	147975762	.	-	.	Parent=gene6;name2=VPS72
+###
