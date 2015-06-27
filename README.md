@@ -39,6 +39,7 @@ Options:
   -h, --help   show this help message and exit
   -min=MINLEN  minimum length (default: 10)
   -max=MAXLEN  maximum length (default: 100)
+  -s SEED      random seed (default: time)
   -n NUMSTR    number of substrings (default: 100)
 ```
 ### gt-ltrclean

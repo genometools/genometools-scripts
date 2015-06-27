@@ -16,7 +16,6 @@
   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ]]
 
-math.randomseed(os.time())
 package.path = gt.script_dir .. "/?.lua;" .. package.path
 require("optparse")
 
@@ -27,9 +26,11 @@ op:option{"-min", action='store', dest='minlen',
                 help="minimum length (default: 10)"}
 op:option{"-max", action='store', dest='maxlen',
                 help="maximum length (default: 100)"}
+op:option{"-s", action='store', dest='seed',
+                help="random seed (default: time)"}
 op:option{"-n", action='store', dest='numstr',
                 help="number of substrings (default: 100)"}
-options,args = op:parse({numstr = 100, minlen = 10, maxlen = 100})
+options,args = op:parse({numstr = 100, minlen = 10, maxlen = 100, seed=os.time()})
 
 function usage()
   op:help()
@@ -44,6 +45,8 @@ idxname  = args[1]
 minlen = tonumber(options.minlen)
 maxlen = tonumber(options.maxlen)
 nsubstr = tonumber(options.numstr)
+
+math.randomseed(tonumber(options.seed))
 
 el = gt.encseq_loader_new()
 es = el:load(idxname)
