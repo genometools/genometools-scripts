@@ -8,10 +8,9 @@ end
 Name "encseq-sample: simple test"
 Keywords "encseq-sample"
 Test do
-  run_test("gt encseq encode -indexname encseq-sample_in.fasta.gz " + \
+  run_test("gt encseq encode -indexname ./1 " + \
            "#{$testdata}/encseq-sample_in.fasta.gz")
-  run_test("gt #{$cur}/gt-encseq-sample -s 4711 -n 20 " + \
-           "encseq-sample_in.fasta.gz")
+  run_test("gt #{$cur}/gt-encseq-sample -s 4711 -n 20 1")
   run("diff #{last_stdout} #{$testdata}/encseq-sample_out.fasta")
 end
 
