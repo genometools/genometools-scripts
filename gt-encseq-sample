@@ -1,0 +1,62 @@
+#!/usr/bin/env gt
+
+--[[
+  Copyright (c) 2015 Sascha Steinbiss <sascha@steinbiss.name>
+
+  Permission to use, copy, modify, and distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+]]
+
+math.randomseed(os.time())
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+
+op = OptionParser:new({usage="%prog <options> indexname",
+                       oneliner="Extract random substrings from a GtEncseq. ",
+                       version="0.1"})
+op:option{"-min", action='store', dest='minlen',
+                help="minimum length (default: 10)"}
+op:option{"-max", action='store', dest='maxlen',
+                help="maximum length (default: 100)"}
+op:option{"-n", action='store', dest='numstr',
+                help="number of substrings (default: 100)"}
+options,args = op:parse({numstr = 100, minlen = 10, maxlen = 100})
+
+function usage()
+  op:help()
+  os.exit()
+end
+
+if #args < 1 then
+  usage()
+end
+
+idxname  = args[1]
+minlen = tonumber(options.minlen)
+maxlen = tonumber(options.maxlen)
+nsubstr = tonumber(options.numstr)
+
+el = gt.encseq_loader_new()
+es = el:load(idxname)
+i = 0
+while i < nsubstr do
+  len = math.random(minlen, maxlen)
+  seqno = math.random(es:num_of_sequences())-1
+  eslen = es:seqlength(seqno)
+  if eslen > len then
+    start = es:seqstartpos(seqno) + math.random(eslen-len)
+    stop = start + len - 1
+    print(">"..start.."-"..stop.." (length "..len..")")
+    print(es:extract_decoded(start, stop))
+    i = i + 1
+  end
+end
