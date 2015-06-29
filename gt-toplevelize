@@ -1,0 +1,81 @@
+#!/usr/bin/env gt
+
+--[[
+  Copyright (c) 2015 Sascha Steinbiss <sascha@steinbiss.name>
+
+  Permission to use, copy, modify, and distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+]]
+
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+
+op = OptionParser:new({usage="%prog <options> <sequence> < infile.gff",
+                       oneliner="Promote features of a given type to toplevel.",
+                       version="0.1"})
+op:option{"-t", action='store', dest='type',
+                help="type to toplevelize"}
+options,args = op:parse({type = "LTR_retrotransposon"})
+
+function usage()
+  op:help()
+  os.exit(1)
+end
+
+if #args < 1 then
+  usage()
+end
+
+rm = gt.region_mapping_new_seqfile_matchdescstart(args[1])
+gff3v = gt.gff3_visitor_new()
+outfile = assert(io.open("toplevelized_" .. options.type .. ".fasta", "w+"))
+
+visitor = gt.custom_visitor_new()
+function visitor:visit_feature(fn)
+  for node in fn:children() do
+    if node:get_type() == options.type then
+      outfile:write(">" .. node:get_attribute("ID") .. "\n")
+      local seq = node:extract_sequence(options.type, false, rm)
+      outfile:write(seq)
+      outfile:write("\n")
+      local start = node:get_range():get_start()
+      for c in node:children() do
+        local new_rng = gt.range_new(c:get_range():get_start() - start + 1,
+                                     c:get_range():get_start() - start +
+                                     c:get_range():length())
+        c:change_seqid(node:get_attribute("ID"))
+        c:set_range(new_rng)
+      end
+      node:accept(gff3v)
+    end
+  end
+  return 0
+end
+
+-- make simple visitor stream, just applies given visitor to every node
+visitor_stream = gt.custom_stream_new_unsorted()
+function visitor_stream:next_tree()
+  local node = self.instream:next_tree()
+  if node then
+    node:accept(self.vis)
+  end
+  return node
+end
+
+visitor_stream.instream = gt.gff3_in_stream_new_sorted()
+visitor_stream.vis = visitor
+local gn = visitor_stream:next_tree()
+while (gn) do
+  gn = visitor_stream:next_tree()
+end
+
+outfile:close()
