@@ -1,0 +1,111 @@
+#!/usr/bin/env gt
+
+--[[
+  Copyright (c) 2015 Sascha Steinbiss <sascha@steinbiss.name>
+
+  Permission to use, copy, modify, and distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+]]
+
+math.randomseed(os.time())
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+
+op = OptionParser:new({usage="%prog <options> < infile.gff3",
+                       oneliner="Keep only 'best' (smallest e-value) protein "
+                         .. "match per overlapping cluster from LTRdigest "
+                         .. "results.",
+                       version="0.1"})
+op:option{"-type", action='store', dest='type',
+                help="root type (default: LTR_retrotransposon)"}
+options,args = op:parse({type = 'LTR_retrotransposon'})
+
+function usage()
+  op:help()
+  os.exit()
+end
+
+visitor = gt.custom_visitor_new()
+function visitor:visit_feature(fn)
+  local retrotransposons = {}
+  -- collect LTR_retrotransposon nodes
+  for node in fn:children() do
+    if node and node:get_type() == options.type then
+      table.insert(retrotransposons, node)
+    end
+  end
+  for _,node in ipairs(retrotransposons) do
+    -- determine clusters of overlapping matches
+    local ovlclusters = {}
+    for node2 in node:children() do
+      if node2 and node2:get_type() == "protein_match" then
+        local inserted = false
+        for _, cl in ipairs(ovlclusters) do
+          for _, n in ipairs(cl) do
+            if n:get_range():overlap(node2:get_range()) then
+              table.insert(cl, node2)
+              inserted = true
+              break
+            end
+          end
+        end
+        if not inserted then
+          table.insert(ovlclusters, {node2})
+        end
+      end
+    end
+    for _,cl in pairs(ovlclusters) do
+      -- sort clusters by ascending e-value (feature score)
+      table.sort(cl, function (a,b)
+       local as = a:get_score()
+       if not as then
+         as = 1000
+       end
+       local bs = a:get_score()
+       if not bs then
+         bs = 1000
+       end
+       return as < bs
+      end)
+      -- keep only best element
+      for i,n in ipairs(cl) do
+        -- best element is the first, get rid of all others
+        if i > 1 then
+          node:remove_leaf(n)
+        end
+      end
+    end
+  end
+  return 0
+end
+
+-- make simple visitor stream, just applies given visitor to every node
+visitor_stream = gt.custom_stream_new_unsorted()
+function visitor_stream:next_tree()
+  local node = self.instream:next_tree()
+  if node then
+    node:accept(self.vis)
+  end
+  return node
+end
+
+-- visitor stream gets its input from GFF3 input file
+visitor_stream.instream = gt.gff3_in_stream_new_sorted()
+visitor_stream.vis = visitor
+
+-- output stream prints features in GFF3
+out_stream = gt.gff3_out_stream_new_retainids(visitor_stream)
+local gn = out_stream:next_tree()
+while (gn) do
+  gn = out_stream:next_tree()
+end
+

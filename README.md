@@ -30,6 +30,27 @@ Options:
   -h, --help    show this help message and exit
   -a ATTRIBUTE  attribute to pass on to children (default: Name)
 ```
+### gt-encseq-sample
+```
+Extract random substrings from a GtEncseq. 
+Usage: gt ./gt-encseq-sample <options> indexname
+
+Options:
+  -h, --help   show this help message and exit
+  -min=MINLEN  minimum length (default: 10)
+  -max=MAXLEN  maximum length (default: 100)
+  -s SEED      random seed (default: time)
+  -n NUMSTR    number of substrings (default: 100)
+```
+### gt-ltrclean
+```
+Keep only 'best' (smallest e-value) protein match per overlapping cluster from LTRdigest results.
+Usage: gt ./gt-ltrclean <options> < infile.gff3
+
+Options:
+  -h, --help  show this help message and exit
+  -type=TYPE  root type (default: LTR_retrotransposon)
+```
 ### gt-stripstop
 ```
 Converts all genes with internal stop codons to pseudogenes.

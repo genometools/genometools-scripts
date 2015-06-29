@@ -187,7 +187,7 @@ class Test
         i = "failed"
         if e_code != 1 then i = "error" end
         msg << i << "\n"
-        msg << "     [ problem: #{e_info.message}" << "\n"
+        msg << "     [ run #{$run_no} problem: #{e_info.message}" << "\n"
         msg << "       in: #{Dir.pwd} ]" << "\n"
         File.open("stest_error", "w") do |f|
           f.puts("Test #{@id} '#{@name}': #{i}:")
