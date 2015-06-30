@@ -60,3 +60,12 @@ Options:
   -h, --help  show this help message and exit
   -r          skip feature instead of making it a pseudogene
 ```
+### gt-toplevelize
+```
+Promote features of a given type to toplevel.
+Usage: gt ./gt-toplevelize <options> <sequence> < infile.gff
+
+Options:
+  -h, --help  show this help message and exit
+  -t TYPE     type to toplevelize
+```

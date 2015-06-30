@@ -32,3 +32,6 @@ install:
 
 test:
 	cd testsuite; env -i PATH=$$PATH:`pwd`/../_gt/bin ./testsuite.rb
+
+testclean:
+	rm -rf testsuite/stest_testsuite
