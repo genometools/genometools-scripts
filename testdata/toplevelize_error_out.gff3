@@ -1,0 +1,69 @@
+##gff-version   3
+LTR_retrotransposon3	LTRharvest	LTR_retrotransposon	1	15633	.	?	.	ID=LTR_retrotransposon1;ltr_similarity=97.62;seq_number=0
+LTR_retrotransposon3	LTRharvest	long_terminal_repeat	1	704	.	?	.	Parent=LTR_retrotransposon1
+LTR_retrotransposon3	LTRharvest	long_terminal_repeat	14919	15633	.	?	.	Parent=LTR_retrotransposon1
+###
+LTR_retrotransposon4	LTRharvest	LTR_retrotransposon	1	4496	.	?	.	ID=LTR_retrotransposon2;ltr_similarity=93.18;seq_number=0
+LTR_retrotransposon4	LTRharvest	long_terminal_repeat	1	128	.	?	.	Parent=LTR_retrotransposon2
+LTR_retrotransposon4	LTRharvest	long_terminal_repeat	4365	4496	.	?	.	Parent=LTR_retrotransposon2
+###
+LTR_retrotransposon5	LTRharvest	LTR_retrotransposon	1	6742	.	?	.	ID=LTR_retrotransposon3;ltr_similarity=94.81;seq_number=0
+LTR_retrotransposon5	LTRharvest	long_terminal_repeat	1	385	.	?	.	Parent=LTR_retrotransposon3
+LTR_retrotransposon5	LTRharvest	long_terminal_repeat	6366	6742	.	?	.	Parent=LTR_retrotransposon3
+###
+LTR_retrotransposon6	LTRharvest	LTR_retrotransposon	1	4277	.	?	.	ID=LTR_retrotransposon4;ltr_similarity=98.40;seq_number=0
+LTR_retrotransposon6	LTRharvest	long_terminal_repeat	1	312	.	?	.	Parent=LTR_retrotransposon4
+LTR_retrotransposon6	LTRharvest	long_terminal_repeat	3965	4277	.	?	.	Parent=LTR_retrotransposon4
+###
+LTR_retrotransposon7	LTRharvest	LTR_retrotransposon	1	1909	.	?	.	ID=LTR_retrotransposon5;ltr_similarity=86.62;seq_number=0
+LTR_retrotransposon7	LTRharvest	long_terminal_repeat	1	142	.	?	.	Parent=LTR_retrotransposon5
+LTR_retrotransposon7	LTRharvest	long_terminal_repeat	1774	1909	.	?	.	Parent=LTR_retrotransposon5
+###
+LTR_retrotransposon8	LTRharvest	LTR_retrotransposon	1	8119	.	?	.	ID=LTR_retrotransposon6;ltr_similarity=100.00;seq_number=0
+LTR_retrotransposon8	LTRharvest	long_terminal_repeat	1	433	.	?	.	Parent=LTR_retrotransposon6
+LTR_retrotransposon8	LTRharvest	long_terminal_repeat	7687	8119	.	?	.	Parent=LTR_retrotransposon6
+###
+LTR_retrotransposon9	LTRharvest	LTR_retrotransposon	1	12691	.	?	.	ID=LTR_retrotransposon7;ltr_similarity=85.15;seq_number=0
+LTR_retrotransposon9	LTRharvest	long_terminal_repeat	1	194	.	?	.	Parent=LTR_retrotransposon7
+LTR_retrotransposon9	LTRharvest	long_terminal_repeat	12490	12691	.	?	.	Parent=LTR_retrotransposon7
+###
+LTR_retrotransposon10	LTRharvest	LTR_retrotransposon	1	3305	.	?	.	ID=LTR_retrotransposon8;ltr_similarity=93.89;seq_number=0
+LTR_retrotransposon10	LTRharvest	long_terminal_repeat	1	608	.	?	.	Parent=LTR_retrotransposon8
+LTR_retrotransposon10	LTRharvest	long_terminal_repeat	2684	3305	.	?	.	Parent=LTR_retrotransposon8
+###
+LTR_retrotransposon11	LTRharvest	LTR_retrotransposon	1	2681	.	?	.	ID=LTR_retrotransposon9;ltr_similarity=88.19;seq_number=0
+LTR_retrotransposon11	LTRharvest	long_terminal_repeat	1	127	.	?	.	Parent=LTR_retrotransposon9
+LTR_retrotransposon11	LTRharvest	long_terminal_repeat	2559	2681	.	?	.	Parent=LTR_retrotransposon9
+###
+LTR_retrotransposon12	LTRharvest	LTR_retrotransposon	1	1612	.	?	.	ID=LTR_retrotransposon10;ltr_similarity=86.72;seq_number=0
+LTR_retrotransposon12	LTRharvest	long_terminal_repeat	1	128	.	?	.	Parent=LTR_retrotransposon10
+LTR_retrotransposon12	LTRharvest	long_terminal_repeat	1487	1612	.	?	.	Parent=LTR_retrotransposon10
+###
+LTR_retrotransposon13	LTRharvest	LTR_retrotransposon	1	8526	.	?	.	ID=LTR_retrotransposon11;ltr_similarity=99.29;seq_number=0
+LTR_retrotransposon13	LTRharvest	long_terminal_repeat	1	417	.	?	.	Parent=LTR_retrotransposon11
+LTR_retrotransposon13	LTRharvest	long_terminal_repeat	8107	8526	.	?	.	Parent=LTR_retrotransposon11
+###
+LTR_retrotransposon14	LTRharvest	LTR_retrotransposon	1	6981	.	?	.	ID=LTR_retrotransposon12;ltr_similarity=85.31;seq_number=0
+LTR_retrotransposon14	LTRharvest	long_terminal_repeat	1	143	.	?	.	Parent=LTR_retrotransposon12
+LTR_retrotransposon14	LTRharvest	long_terminal_repeat	6850	6981	.	?	.	Parent=LTR_retrotransposon12
+###
+LTR_retrotransposon15	LTRharvest	LTR_retrotransposon	1	3082	.	?	.	ID=LTR_retrotransposon13;ltr_similarity=99.71;seq_number=0
+LTR_retrotransposon15	LTRharvest	long_terminal_repeat	1	346	.	?	.	Parent=LTR_retrotransposon13
+LTR_retrotransposon15	LTRharvest	long_terminal_repeat	2736	3082	.	?	.	Parent=LTR_retrotransposon13
+###
+LTR_retrotransposon16	LTRharvest	LTR_retrotransposon	1	5225	.	?	.	ID=LTR_retrotransposon14;ltr_similarity=90.34;seq_number=0
+LTR_retrotransposon16	LTRharvest	long_terminal_repeat	1	145	.	?	.	Parent=LTR_retrotransposon14
+LTR_retrotransposon16	LTRharvest	long_terminal_repeat	5082	5225	.	?	.	Parent=LTR_retrotransposon14
+###
+LTR_retrotransposon17	LTRharvest	LTR_retrotransposon	1	3677	.	?	.	ID=LTR_retrotransposon15;ltr_similarity=94.33;seq_number=0
+LTR_retrotransposon17	LTRharvest	long_terminal_repeat	1	386	.	?	.	Parent=LTR_retrotransposon15
+LTR_retrotransposon17	LTRharvest	long_terminal_repeat	3290	3677	.	?	.	Parent=LTR_retrotransposon15
+###
+LTR_retrotransposon18	LTRharvest	LTR_retrotransposon	1	15336	.	?	.	ID=LTR_retrotransposon16;ltr_similarity=96.65;seq_number=0
+LTR_retrotransposon18	LTRharvest	long_terminal_repeat	1	471	.	?	.	Parent=LTR_retrotransposon16
+LTR_retrotransposon18	LTRharvest	long_terminal_repeat	14860	15336	.	?	.	Parent=LTR_retrotransposon16
+###
+LTR_retrotransposon19	LTRharvest	LTR_retrotransposon	1	1138	.	?	.	ID=LTR_retrotransposon17;ltr_similarity=88.62;seq_number=0
+LTR_retrotransposon19	LTRharvest	long_terminal_repeat	1	111	.	?	.	Parent=LTR_retrotransposon17
+LTR_retrotransposon19	LTRharvest	long_terminal_repeat	1016	1138	.	?	.	Parent=LTR_retrotransposon17
+###
