@@ -48,12 +48,25 @@ function visitor:visit_feature(fn)
       outfile:write(seq)
       outfile:write("\n")
       local start = node:get_range():get_start()
+      local endp = node:get_range():get_end()
       for c in node:children() do
-        local new_rng = gt.range_new(c:get_range():get_start() - start + 1,
-                                     c:get_range():get_start() - start +
-                                     c:get_range():length())
-        c:change_seqid(node:get_attribute("ID"))
-        c:set_range(new_rng)
+        if c:get_range():get_start() < start or c:get_range():get_end() > endp then
+          io.stderr:write(fn:get_type() .. " with ID '"
+                        .. tostring(fn:get_attribute("ID")) .. "' has a child "
+                        .. c:get_type()
+                        .. " outside its coordinates "
+                        .. "(" .. tostring(c:get_range())
+                        .. " vs. " .. tostring(start)
+                        .. "-" .. tostring(endp) ..") on line "
+                        .. c:get_line_number() .. ", skipping\n")
+          return 0
+        else
+          local new_rng = gt.range_new(c:get_range():get_start() - start + 1,
+                                       c:get_range():get_start() - start +
+                                       c:get_range():length())
+          c:change_seqid(node:get_attribute("ID"))
+          c:set_range(new_rng)
+        end
       end
       node:accept(gff3v)
     end

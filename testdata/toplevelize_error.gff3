@@ -1,0 +1,135 @@
+##gff-version   3
+##sequence-region   md5:9b0952500967f651728d260c53da5508:4 1 1237870
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	4883	13250	.	?	.	ID=repeat_region1
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	4883	4886	.	?	.	Parent=repeat_region1
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	4887	13246	.	?	.	ID=LTR_retrotransposon1;Parent=repeat_region1;ltr_similarity=98.30;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	4687	5180	.	?	.	Parent=LTR_retrotransposon1
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	12954	13246	.	?	.	Parent=LTR_retrotransposon1
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	13247	13250	.	?	.	Parent=repeat_region1
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	34271	40717	.	?	.	ID=repeat_region2
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	34271	34274	.	?	.	Parent=repeat_region2
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	34275	40713	.	?	.	ID=LTR_retrotransposon2;Parent=repeat_region2;ltr_similarity=100.00;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	34275	34773	.	?	.	Parent=LTR_retrotransposon2
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	40215	44713	.	?	.	Parent=LTR_retrotransposon2
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	40714	40717	.	?	.	Parent=repeat_region2
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	44953	60593	.	?	.	ID=repeat_region3
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	44953	44956	.	?	.	Parent=repeat_region3
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	44957	60589	.	?	.	ID=LTR_retrotransposon3;Parent=repeat_region3;ltr_similarity=97.62;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	44957	45660	.	?	.	Parent=LTR_retrotransposon3
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	59875	60589	.	?	.	Parent=LTR_retrotransposon3
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	60590	60593	.	?	.	Parent=repeat_region3
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	231802	236305	.	?	.	ID=repeat_region4
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	231802	231805	.	?	.	Parent=repeat_region4
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	231806	236301	.	?	.	ID=LTR_retrotransposon4;Parent=repeat_region4;ltr_similarity=93.18;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	231806	231933	.	?	.	Parent=LTR_retrotransposon4
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	236170	236301	.	?	.	Parent=LTR_retrotransposon4
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	236302	236305	.	?	.	Parent=repeat_region4
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	302513	309262	.	?	.	ID=repeat_region5
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	302513	302516	.	?	.	Parent=repeat_region5
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	302517	309258	.	?	.	ID=LTR_retrotransposon5;Parent=repeat_region5;ltr_similarity=94.81;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	302517	302901	.	?	.	Parent=LTR_retrotransposon5
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	308882	309258	.	?	.	Parent=LTR_retrotransposon5
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	309259	309262	.	?	.	Parent=repeat_region5
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	323197	327481	.	?	.	ID=repeat_region6
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	323197	323200	.	?	.	Parent=repeat_region6
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	323201	327477	.	?	.	ID=LTR_retrotransposon6;Parent=repeat_region6;ltr_similarity=98.40;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	323201	323512	.	?	.	Parent=LTR_retrotransposon6
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	327165	327477	.	?	.	Parent=LTR_retrotransposon6
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	327478	327481	.	?	.	Parent=repeat_region6
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	334958	336874	.	?	.	ID=repeat_region7
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	334958	334961	.	?	.	Parent=repeat_region7
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	334962	336870	.	?	.	ID=LTR_retrotransposon7;Parent=repeat_region7;ltr_similarity=86.62;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	334962	335103	.	?	.	Parent=LTR_retrotransposon7
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	336735	336870	.	?	.	Parent=LTR_retrotransposon7
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	336871	336874	.	?	.	Parent=repeat_region7
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	339777	347907	.	?	.	ID=repeat_region8
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	339777	339782	.	?	.	Parent=repeat_region8
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	339783	347901	.	?	.	ID=LTR_retrotransposon8;Parent=repeat_region8;ltr_similarity=100.00;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	339783	340215	.	?	.	Parent=LTR_retrotransposon8
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	347469	347901	.	?	.	Parent=LTR_retrotransposon8
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	347902	347907	.	?	.	Parent=repeat_region8
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	440780	453480	.	?	.	ID=repeat_region9
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	440780	440784	.	?	.	Parent=repeat_region9
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	440785	453475	.	?	.	ID=LTR_retrotransposon9;Parent=repeat_region9;ltr_similarity=85.15;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	440785	440978	.	?	.	Parent=LTR_retrotransposon9
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	453274	453475	.	?	.	Parent=LTR_retrotransposon9
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	453476	453480	.	?	.	Parent=repeat_region9
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	473778	477090	.	?	.	ID=repeat_region10
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	473778	473781	.	?	.	Parent=repeat_region10
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	473782	477086	.	?	.	ID=LTR_retrotransposon10;Parent=repeat_region10;ltr_similarity=93.89;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	473782	474389	.	?	.	Parent=LTR_retrotransposon10
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	476465	477086	.	?	.	Parent=LTR_retrotransposon10
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	477087	477090	.	?	.	Parent=repeat_region10
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	531534	534222	.	?	.	ID=repeat_region11
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	531534	531537	.	?	.	Parent=repeat_region11
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	531538	534218	.	?	.	ID=LTR_retrotransposon11;Parent=repeat_region11;ltr_similarity=88.19;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	531538	531664	.	?	.	Parent=LTR_retrotransposon11
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	534096	534218	.	?	.	Parent=LTR_retrotransposon11
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	534219	534222	.	?	.	Parent=repeat_region11
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	685666	687285	.	?	.	ID=repeat_region12
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	685666	685669	.	?	.	Parent=repeat_region12
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	685670	687281	.	?	.	ID=LTR_retrotransposon12;Parent=repeat_region12;ltr_similarity=86.72;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	685670	685797	.	?	.	Parent=LTR_retrotransposon12
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	687156	687281	.	?	.	Parent=LTR_retrotransposon12
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	687282	687285	.	?	.	Parent=repeat_region12
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	691395	699928	.	?	.	ID=repeat_region13
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	691395	691398	.	?	.	Parent=repeat_region13
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	691399	699924	.	?	.	ID=LTR_retrotransposon13;Parent=repeat_region13;ltr_similarity=99.29;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	691399	691815	.	?	.	Parent=LTR_retrotransposon13
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	699505	699924	.	?	.	Parent=LTR_retrotransposon13
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	699925	699928	.	?	.	Parent=repeat_region13
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	801848	808836	.	?	.	ID=repeat_region14
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	801848	801851	.	?	.	Parent=repeat_region14
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	801852	808832	.	?	.	ID=LTR_retrotransposon14;Parent=repeat_region14;ltr_similarity=85.31;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	801852	801994	.	?	.	Parent=LTR_retrotransposon14
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	808701	808832	.	?	.	Parent=LTR_retrotransposon14
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	808833	808836	.	?	.	Parent=repeat_region14
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	929983	933072	.	?	.	ID=repeat_region15
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	929983	929986	.	?	.	Parent=repeat_region15
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	929987	933068	.	?	.	ID=LTR_retrotransposon15;Parent=repeat_region15;ltr_similarity=99.71;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	929987	930332	.	?	.	Parent=LTR_retrotransposon15
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	932722	933068	.	?	.	Parent=LTR_retrotransposon15
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	933069	933072	.	?	.	Parent=repeat_region15
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	975533	980765	.	?	.	ID=repeat_region16
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	975533	975536	.	?	.	Parent=repeat_region16
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	975537	980761	.	?	.	ID=LTR_retrotransposon16;Parent=repeat_region16;ltr_similarity=90.34;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	975537	975681	.	?	.	Parent=LTR_retrotransposon16
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	980618	980761	.	?	.	Parent=LTR_retrotransposon16
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	980762	980765	.	?	.	Parent=repeat_region16
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	1010477	1014161	.	?	.	ID=repeat_region17
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1010477	1010480	.	?	.	Parent=repeat_region17
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	1010481	1014157	.	?	.	ID=LTR_retrotransposon17;Parent=repeat_region17;ltr_similarity=94.33;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1010481	1010866	.	?	.	Parent=LTR_retrotransposon17
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1013770	1014157	.	?	.	Parent=LTR_retrotransposon17
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1014158	1014161	.	?	.	Parent=repeat_region17
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	1196481	1211824	.	?	.	ID=repeat_region18
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1196481	1196484	.	?	.	Parent=repeat_region18
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	1196485	1211820	.	?	.	ID=LTR_retrotransposon18;Parent=repeat_region18;ltr_similarity=96.65;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1196485	1196955	.	?	.	Parent=LTR_retrotransposon18
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1211344	1211820	.	?	.	Parent=LTR_retrotransposon18
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1211821	1211824	.	?	.	Parent=repeat_region18
+###
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	repeat_region	1227621	1228766	.	?	.	ID=repeat_region19
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1227621	1227624	.	?	.	Parent=repeat_region19
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	LTR_retrotransposon	1227625	1228762	.	?	.	ID=LTR_retrotransposon19;Parent=repeat_region19;ltr_similarity=88.62;seq_number=0
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1227625	1227735	.	?	.	Parent=LTR_retrotransposon19
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	long_terminal_repeat	1228640	1228762	.	?	.	Parent=LTR_retrotransposon19
+md5:9b0952500967f651728d260c53da5508:4	LTRharvest	target_site_duplication	1228763	1228766	.	?	.	Parent=repeat_region19
+###
